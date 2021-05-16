@@ -50,8 +50,11 @@ struct ContentView: View {
                   NavigationLink(destination: AnimalDetailView(animal: animal)) {
                     AnimalListItemView(animal: animal)
                   } //: LINK
-                } //: LOOP
+                }//: LOOP
+                CreditsView()
+                    .modifier(CenterModifier())
               } //: LIST
+                
             } else {
               ScrollView(.vertical, showsIndicators: false) {
                 LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10) {
